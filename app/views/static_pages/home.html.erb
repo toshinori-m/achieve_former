@@ -1,6 +1,25 @@
-<h1>achieve</h1>
-<p>
-  This is the home page for the
-  <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-  sample application.
-</p>
+<div class="center jumbotron">
+  <h1>achieve</h1>
+
+  <h2>
+    This is the home page for the
+    <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+    sample application.
+  </h2>
+
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+
+  <ul class="nav navbar-nav navbar-right">
+    <li><%= link_to "goal",    goal_path %></li>
+    <li><%= link_to "threemonths_goal",    threemonths_goal_path %></li>
+    <li><%= link_to "monthly_goal",    monthly_goal_path %></li>
+    <li><%= link_to "report",    report_path %></li>
+    <li><%= link_to "like",    like_path %></li>
+    <li><%= link_to "participationg_room_user",    participationg_room_user_path %></li>
+    <li><%= link_to "message",    message_path %></li>
+  </ul>
+
+</div>
+
+<%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200px"),
+                      "https://rubyonrails.org/" %>
