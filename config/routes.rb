@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get  '/signup',  to: 'users#new'
   root 'static_pages#home'
+  get  '/signup',  to: 'users#new'
   get  '/goal',    to: 'static_pages#goal'
   get  '/threemonths_goal',   to: 'static_pages#threemonths_goal'
   get  '/monthly_goal', to: 'static_pages#monthly_goal'
@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get  '/like', to: 'static_pages#like'
   get  '/participationg_room_user', to: 'static_pages#participationg_room_user'
   get  '/message', to: 'static_pages#message'
+  resources :users
 end
