@@ -1,9 +1,9 @@
 class StaticPagesController < ApplicationController
   def home
+    @goal = current_user.goal.build if logged_in?
   end
 
-  def goals
-  end
+
 
   def threemonths_goal
   end
