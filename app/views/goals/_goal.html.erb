@@ -1,1 +1,8 @@
-<span class="content"><%= goal.content %></span>
+<%= @goal.each do |f| %>
+        
+  <%= f.label :goal_id %>
+  <%= f.number_field :goal_id, value: num %>
+  <%= f.label :content, "概要" %>
+  <%= f.text_area :content, placeholder: "Sample Text"  %>
+  <%= f.submit "登録", class: "btn btn-primary" %>
+<% end %>

@@ -1,25 +1,12 @@
-<div class="row">
-  <aside class="col-md-4">
-    <h1>goal</h1>
+  <h1>Achieve your goals</h1>
+    <div class="row">
+      <div class="col-md-4">
+      <%= link_to "今期目標", goal_path , class: "btn" , id: "login" %>
 
-      <%= link_to "Goal", goal_path %>
+        <%= render partial: 'goals/goal', locals: {goal: @goal} %>
 
-      <section class="goal">
-        <%= render 'goals/goal' %>
-      </section>
-
-
-  </aside>
+</div>
 </div>
 
-<div class="center jumbotron">
-  <h1>achieve</h1>
-  <h2>
-    This is the home page for the
-    <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+
 </div>
-  <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200px"),
-              "https://rubyonrails.org/" %>

@@ -1,9 +1,17 @@
 <% provide(:title, "goal") %>
-  <h1>goal</h1>
-  <%= form_with(model: @goal, url: root_path(params[:id]),local: true) do |f| %>
-    <%= render 'shared/error_messages', object: f.object %>
+<h1>今期目標</h1>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <%= form_with(model: @goal, url: root_path(params[:id]),local: true) do |f| %>
     <div class="field">
-      <%= f.text_area :content, placeholder: "Compose new goal..." %>
+    <%= f.text_area :content, placeholder: "Compose new goal..." %>
     </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
-<% end %>
+  </div>
+  <div class="col-md-4 col-md-offset-2">
+    <%= f.submit "Goal OK", class: "btn" , id: "login" %>
+    <% end %>
+  </div>
+  <div class="col-md-1 col-md-offset-1">
+    <%= link_to "キャンセル", root_path , class: "btn" , id: "cancel" %>
+  </div>
+</div>

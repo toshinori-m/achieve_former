@@ -14,7 +14,8 @@
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 130px;
+  background: linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url(https://img2.mypl.net/image.php?id=ce3887880ccbd533605406843048d4a446d29293_cms_image.jpg&p=s3-img-origin02&s=960_1480&op=);
 }
 
 section {
@@ -42,6 +43,9 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px blue;
+  font-weight: bold;
 }
 
 
@@ -49,6 +53,61 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
+
+/* login_button */
+#login {
+  border: 0;
+  line-height: 3.5;
+  padding: 0 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: blue;
+  background-image: linear-gradient(to top left,
+                                    rgba(0, 0, 0, .2),
+                                    rgba(0, 0, 0, .2) 30%,
+                                    rgba(0, 0, 0, 0));
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+#login:hover {
+  background-color: #0066FF;
+}
+
+#login:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+              inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+
+#cancel {
+  border: 0;
+  line-height: 3.5;
+  padding: 0 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: green;
+  background-image: linear-gradient(to top left,
+                                    rgba(0, 0, 0, .2),
+                                    rgba(0, 0, 0, .2) 30%,
+                                    rgba(0, 0, 0, 0));
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+#cancel:hover {
+  background-color: #00CC00;
+}
+
+#cancel:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+              inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
 
 /* header */
 .navbar{
@@ -63,6 +122,7 @@ p {
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
+  text-shadow: 1px 1px 2px red;
   font-weight: bold;
 }
 
@@ -113,32 +173,6 @@ footer ul li {
 }
 
 /* sidebar */
-
-aside {
-  section.user_info {
-    margin-top: 20px;
-  }
-  section {
-    padding: 10px 0;
-    margin-top: 20px;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
-  }
-}
 
 .gravatar {
   float: left;
@@ -216,11 +250,13 @@ input {
   p {
     font-size: 1.1em;
     line-height: 1.7em;
+    background-color: #fff;
   }
   table {
   text-align: left;
   border-collapse: collapse;
   border: solid 4px orange;
+  background-color: #fff;
   }
   table th {
   padding: 10px;
@@ -230,49 +266,4 @@ input {
   }
 }
 
-/* goals */
 
-.goals {
-  list-style: none;
-  padding: 0;
-  li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
-  }
-  .user {
-    margin-top: 5em;
-    padding-top: 0;
-  }
-  .content {
-    display: block;
-    margin-left: 60px;
-    img {
-      display: block;
-      padding: 5px 0;
-    }
-  }
-  .timestamp {
-    color: $gray-light;
-    display: block;
-    margin-left: 60px;
-  }
-  .gravatar {
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
-  }
-}
-
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
-  }
-}
-
-span.image {
-  margin-top: 10px;
-  input {
-    border: 0;
-  }
-}
