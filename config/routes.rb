@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root  'static_pages#home'
-  get   '/goal',        to: 'static_pages#goal'
   get  '/training_menu',to: 'static_pages#training_menu'
   get   '/signup',      to: 'users#new'
   get    '/login',      to: 'sessions#new'

@@ -1,10 +1,10 @@
 <h1>Achieve your goals</h1>
 <div class="row">
 <% @goal.each do |goal| %>
-  <div class="col-md-4">
+  <div class="col-md-8">
   <%= link_to '今期目標', edit_goal_path(goal.id), method: :get , class: "btn" , id: "login"%>
 
-    <%= render partial: 'goals/goal', locals: {goal: @goal} %>
+    <%= render partial: 'goal/goal', locals: {goal: @goal} %>
     <% end %>
 </div>
 </div>
