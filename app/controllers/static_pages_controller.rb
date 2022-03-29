@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
     @goal = Goal.all
+    @threemonths_goals = Goal.all
   end
 
   def goal

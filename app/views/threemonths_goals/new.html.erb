@@ -1,0 +1,20 @@
+<% provide(:title, 'Edit threemonths_goal') %>
+<% provide(:button, '更新') %>
+<h1>３ヶ月ごとの目標</h1>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+  <%= form_for(ThreemonthsGoal.new) do |f| %>
+    
+    <%= f.fields_for :users do |user| %>
+      <%= user.label :１〜３月 %>
+      <%= user.text_field :content %>
+    <% end %>
+    
+    <%= f.submit "Submit" %>
+  <% end %>
+  
+  </div>
+  <div class="col-md-1 col-md-offset-1">
+    <%= link_to "キャンセル", root_path , class: "btn" , id: "cancel" %>
+  </div>
+</div>

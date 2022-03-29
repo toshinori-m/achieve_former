@@ -23,6 +23,12 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "#{@base_title}"
   end
 
+  test "should get threemonths_goal" do
+    get root_path
+    assert_response :success
+    assert_select "title", "#{@base_title}"
+  end
+
   test "should get training_menu" do
     get training_menu_path
     assert_response :success
