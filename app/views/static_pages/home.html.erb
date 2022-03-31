@@ -13,7 +13,10 @@
   <div class="col-md-8">
   <%= link_to '３ヶ月間目的', new_threemonths_goal_path(threemonths_goal.id), method: :get , class: "btn" , id: "login"%>
 
-    <%= render partial: 'threemonths_goal/threemonths_goal', locals: {threemonths_goal: @threemonths_goal} %>
+  <%= render partial: "threemonths_goal/show" , locals: {threemonths_goal: @threemonths_goal} %>
+
+
+
     <% end %>
 </div>
 </div>

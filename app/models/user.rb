@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_one :goal, dependent: :destroy
-  has_many :threemonths_goals, dependent: :destroy
+  has_one   :goal, dependent: :destroy
+  has_many  :threemonths_goals, dependent: :destroy
 
   attr_accessor :remember_token
   before_save { email.downcase! }
