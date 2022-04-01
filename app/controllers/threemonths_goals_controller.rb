@@ -24,6 +24,6 @@ class ThreemonthsGoalsController < ApplicationController
 
   private
   def threemonths_goals_params
-    params.require(:threemonths_goal).permit(users_attributes: [:id, :content])
+    params.require(:threemonths_goal).permit(:content)
   end
 end
