@@ -18,6 +18,7 @@ class ThreemonthsGoalsController < ApplicationController
     @threemonths_goals = ThreemonthsGoal.all
     @threemonths_goals = ThreemonthsGoal.new
   end
+  
   def show
     @threemonths_goals = ThreemonthsGoal.find(params[:id])
   end
