@@ -1,5 +1,6 @@
 class ThreemonthsGoalsController < ApplicationController
   
+
   def new
     @threemonths_goals = ThreemonthsGoal.new
   end
@@ -15,12 +16,10 @@ class ThreemonthsGoalsController < ApplicationController
   end
 
   def index
-    @threemonths_goals = ThreemonthsGoal.all
-    @threemonths_goals = ThreemonthsGoal.new
   end
   
   def show
-    @threemonths_goals = ThreemonthsGoal.find(params[:id])
+    @threemonths_goals = ThreemonthsGoal.all.order(id: "DESC").limit(1)
   end
 
   private

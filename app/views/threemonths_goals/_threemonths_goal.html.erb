@@ -1,12 +1,3 @@
 <% @threemonths_goals.each do |threemonths_goals| %>
-  <p><%= threemonths_goals.content %></p>
+  <%= threemonths_goals.content %>
 <% end %>
-
-
-
-<div class="content-box">
-  <div class="content-info">
-    <p class="content-user"><%= content."１〜３月" %></p>
-  </div>
-  <p><%= threemonths_goals_format(h(content.text)) %></p>
-</div>

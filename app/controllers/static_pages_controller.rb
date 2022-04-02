@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
     @goal = Goal.all
-    @threemonths_goals = Goal.all
+    @threemonths_goals = ThreemonthsGoal.all.order(id: "DESC").limit(1)
   end
 
   def goal
