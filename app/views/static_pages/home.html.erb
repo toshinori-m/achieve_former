@@ -15,8 +15,16 @@
 
   <%= render template: "threemonths_goals/show"  %>
 
-  
+    <% end %>
+</div>
+</div>
+<div class="row">
+<% @monthly_goals.each do |monthly_goal| %>
+  <div class="col-md-8">
+  <%= link_to '今月目的', new_monthly_goal_path(monthly_goal.id), method: :get , class: "btn" , id: "login"%>
 
+  <%= render template: "monthly_goals/show"  %>
+  
     <% end %>
 </div>
 </div>

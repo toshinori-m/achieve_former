@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :users
   resources :goal,              only: %i[edit update show]
   resources :threemonths_goals, only: %i[index show new create]
+  resources :monthly_goals,     only: %i[index show new create]
 end
 

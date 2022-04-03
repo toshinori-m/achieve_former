@@ -16,10 +16,11 @@ class ThreemonthsGoalsController < ApplicationController
   end
 
   def index
+    @threemonths_goals = ThreemonthsGoal.all
   end
   
   def show
-    @threemonths_goals = ThreemonthsGoal.all.order(id: "DESC").limit(1)
+    @threemonths_goals = ThreemonthsGoal.all
   end
 
   private
