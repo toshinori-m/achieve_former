@@ -1,3 +1,36 @@
 <% @threemonths_goals.each do |threemonths_goals| %>
   <%= threemonths_goals.content %>
 <% end %>
+
+
+User.where("id IN (1, 2)")
+
+# 発行されるSQL
+User Load (4.3ms)  SELECT `users`.* FROM `users` WHERE (id IN (1, 2))
+=> [#<User:0x007fd3180a9f18
+  id: 1,
+  name: "ぴかこ",
+  age: 25,
+  height: 170,
+  weight: 60>,
+ #<User:0x007fd3180a9dd8
+  id: 2,
+  name: "ぴかわか",
+  age: 67,
+  height: 156,
+  weight: 60>]
+
+  
+  > Book.find_by(title: "test", price: 960)
+=>#<Book:0x007fb51b6c9058
+ id: 2,
+ title: "test",
+ price: 960,
+ publish: "test",
+ created_at: Sat, 05 May 2018 05:58:20 UTC +00:00,
+ updated_at: Sat, 05 May 2018 05:58:20 UTC +00:00>
+
+  # Userテーブルのid=1のレコードを取得
+
+User.find(1)
+=> SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1

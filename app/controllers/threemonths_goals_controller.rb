@@ -2,14 +2,14 @@ class ThreemonthsGoalsController < ApplicationController
   
 
   def new
-    @threemonths_goals = ThreemonthsGoal.new
+    @threemonths_goals = ThreemonthsGoal.where(threemonths_goals_id: params[:id])
   end
-
+  
   def create
-    @threemonths_goals = ThreemonthsGoal.new(threemonths_goals_params)
-    @threemonths_goals.user_id = current_user.id
+    @threemonths_goals = ThreemonthsGoal.where(threemonths_goals_id: params[:id])
+
     if @threemonths_goals.save
-      redirect_to  root_path
+      redirect_to root_path
     else
       render :new
     end
@@ -21,6 +21,7 @@ class ThreemonthsGoalsController < ApplicationController
   
   def show
     @threemonths_goals = ThreemonthsGoal.all
+
   end
 
   private
