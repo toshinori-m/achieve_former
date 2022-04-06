@@ -3,24 +3,15 @@
 <h1>３ヶ月ごとの目標</h1>
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
-  <%= form_with model: @threemonths_goals do |form| %>
-    <% @threemonths_goals.each do |threemonths_goal|%>
-      <%= fields_for 'threemonths_goals[]', threemonths_goal do |f| %>
+  <%= form_with model: [@users, @threemonths_goals] do |f| %>
+    <%= f.fields_for : threemonths_goals do |i| %>
     <div class="field">
-      <%= f.label :１〜３月 %>
       <%= f.text_field :content %>
-      <%= f.hidden_field :user_id, :value => "1" %>
     </div>
     <% end %>
-      <%= fields_for 'threemonths_goals[]', threemonths_goal do |f| %>
-    <div class="field">
-    <%= f.label :４〜６月 %>
-    <%= f.text_field :content %>
-    <%= f.hidden_field :user_id, :value => "2" %>
-    </div>
+
     <% end %>
-    <% end %>
-    <%= form.submit "Submit" %>
+    <%= i.submit "Submit" %>
 
   <% end %>
   </div>
@@ -28,4 +19,3 @@
     <%= link_to "キャンセル", root_path , class: "btn" , id: "cancel" %>
   </div>
 </div>
-

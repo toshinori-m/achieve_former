@@ -1,12 +1,14 @@
 class ThreemonthsGoalsController < ApplicationController
   
-
-  def new
-    @threemonths_goals = ThreemonthsGoal.where(threemonths_goals_id: params[:id])
-  end
   
+  def new
+    @users = User.find(params[:users_id])
+    @form = Form::ProductCollection.new
+  end
+
   def create
-    @threemonths_goals = ThreemonthsGoal.where(threemonths_goals_id: params[:id])
+    @users = User.find(params[:users_id])
+    @form = Form::ThreemonthsGoalCollection.new(threemonths_goal_collection_params)
 
     if @threemonths_goals.save
       redirect_to root_path
@@ -25,7 +27,10 @@ class ThreemonthsGoalsController < ApplicationController
   end
 
   private
-  def threemonths_goals_params
-    params.require(:threemonths_goal).permit(:content)
+  def threemonths_goal_collection_params
+    params
+      .require(:form_threemonths_goal_collection)
+      .permit(threemonths_goals_attributes: :content)
   end
 end
+
