@@ -2,15 +2,13 @@ class ThreemonthsGoalsController < ApplicationController
   
   
   def new
-    @users = User.find(params[:users_id])
-    @form = Form::ProductCollection.new
+    @form = Form::ThreemonthsGoalCollection.new
   end
 
   def create
-    @users = User.find(params[:users_id])
     @form = Form::ThreemonthsGoalCollection.new(threemonths_goal_collection_params)
 
-    if @threemonths_goals.save
+    if @form.save
       redirect_to root_path
     else
       render :new

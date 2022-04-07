@@ -4,7 +4,7 @@ class Form::ThreemonthsGoalCollection < Form::Base
 
   def initialize(attributes = {})
     super attributes
-    self.threemonths_goals = FORM_COUNT.times.map { ThreemonthsGoal.new() } unless self.threemonths_goals.present?
+    self.threemonths_goals = FORM_COUNT.times.map { Form::ThreemonthsGoal.new() } unless self.threemonths_goals.present?
   end
   
   # 上でsuper attributesとしているので必要
@@ -12,16 +12,21 @@ class Form::ThreemonthsGoalCollection < Form::Base
     self.threemonths_goals = attributes.map { |_, v| ThreemonthsGoal.new(v) }
   end
 
+  def valid?
+    valid_threemonths_goals = target_threemonths_goals.map(&:valid?).all?
+    super && valid_threemonths_goals
+  end
+  
   def save
-    # 実際にやりたいことはこれだけ
-    # self.threemonths_goals.map(&:save!)
-
-    # 複数件全て保存できた場合のみ実行したいので、transactionを使用する
     ThreemonthsGoal.transaction do
-      self.threemonths_goals.map(&:save!)
+      self.threemonths_goals.map do |t|
+        if t.availability # ここでチェックボックスにチェックを入れている商品のみが保存される
+          t.save
+        end
+      end
     end
       return true
     rescue => e
       return false
+    end
   end
-end
