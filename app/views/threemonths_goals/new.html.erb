@@ -3,14 +3,11 @@
 <h1>３ヶ月ごとの目標</h1>
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
-  <%= form_with( model: @form ,url: threemonths_goals_path) do |f| %>
+  <%= form_with model: @form ,url: threemonths_goals_path, local: true  do |f| %>
     <%= f.fields_for :threemonths_goals do |i| %>
-
       <%= i.label :１〜３月 %>
       <%= i.text_field :content %>
     <% end %>
-
-
     <%= f.submit "Submit" %>
   <% end %>
   </div>
@@ -18,7 +15,5 @@
     <%= link_to "キャンセル", root_path , class: "btn" , id: "cancel" %>
   </div>
 </div>
-
-
 
 

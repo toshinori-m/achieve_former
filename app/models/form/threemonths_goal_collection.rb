@@ -1,10 +1,9 @@
 class Form::ThreemonthsGoalCollection < Form::Base
   FORM_COUNT = 4
-  attr_accessor :threemonths_goals
 
   def initialize(attributes = {})
     super attributes
-    self.threemonths_goals = FORM_COUNT.times.map { Form::ThreemonthsGoal.new() } unless self.threemonths_goals.present?
+    self.threemonths_goals = FORM_COUNT.times.map { ThreemonthsGoal.new() } unless self.threemonths_goals.present?
   end
   
   # 上でsuper attributesとしているので必要
@@ -17,16 +16,23 @@ class Form::ThreemonthsGoalCollection < Form::Base
     super && valid_threemonths_goals
   end
   
+  attr_accessor :threemonths_goals
+
+  # コレクションをDBに保存するメソッド
   def save
-    ThreemonthsGoal.transaction do
-      self.threemonths_goals.map do |t|
-        if t.availability # ここでチェックボックスにチェックを入れている商品のみが保存される
-          t.save
-        end
+    is_success = true
+    ActiveRecord::Base.transaction do
+      threemonths_goals.each do |result|
+        # バリデーションを全てかけたいからsave!ではなくsaveを使用
+        is_success = false unless result.save
       end
+      # バリデーションエラーがあった時は例外を発生させてロールバックさせる
+      raise ActiveRecord::RecordInvalid unless is_success
     end
-      return true
-    rescue => e
-      return false
-    end
+    rescue
+      p 'エラー'
+    ensure
+      return is_success
   end
+end
+

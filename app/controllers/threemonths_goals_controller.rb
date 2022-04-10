@@ -28,7 +28,6 @@ class ThreemonthsGoalsController < ApplicationController
   def threemonths_goal_collection_params
     params
       .require(:form_threemonths_goal_collection)
-      .permit(threemonths_goals_attributes: :content)
+      .permit(threemonths_goals_attributes: [:content])
   end
 end
-
