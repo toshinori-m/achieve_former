@@ -1,5 +1,11 @@
-<% @threemonths_goals.each do |threemonths_goals| %>
-  <%= threemonths_goals.content %>
+
+<%= fields_for :@threemonths_goals do |i| %>
+  <%= i.label :１〜３月 %>
+  <%= i.text_field :content %>
+  <%= i.label :４〜６月 %>
+  <%= i.text_field :content %>
+  <%= i.label :７〜９月 %>
+  <%= i.text_field :content %>
+  <%= i.label :１０〜１２月 %>
+  <%= i.text_field :content %>
 <% end %>
-
-
