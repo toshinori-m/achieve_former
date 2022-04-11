@@ -1,5 +1,5 @@
 class Form::ThreemonthsGoalCollection < Form::Base
-  FORM_COUNT = 4
+  FORM_COUNT = 1
 
   def initialize(attributes = {})
     super attributes
