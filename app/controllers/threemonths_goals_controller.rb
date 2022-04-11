@@ -1,6 +1,5 @@
 class ThreemonthsGoalsController < ApplicationController
   
-  
   def new
     @form = Form::ThreemonthsGoalCollection.new
   end
@@ -20,7 +19,7 @@ class ThreemonthsGoalsController < ApplicationController
   end
   
   def show
-    @threemonths_goals = ThreemonthsGoal.all
+    @threemonths_goals = ThreemonthsGoal.where(user_id: @user.id)
 
   end
 
