@@ -54,6 +54,33 @@ p {
   line-height: 1.7em;
 }
 
+/* btn_button */
+#btn {
+  border: 0;
+  line-height: 3.5;
+  padding: 0 20px;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: blue;
+  background-image: linear-gradient(to top left,
+                                    rgba(0, 0, 0, .2),
+                                    rgba(0, 0, 0, .2) 30%,
+                                    rgba(0, 0, 0, 0));
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+#btn:hover {
+  background-color: #0066FF;
+}
+
+#btn:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+              inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
 /* login_button */
 #login {
   border: 0;
@@ -80,7 +107,6 @@ p {
   box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
               inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
-
 
 #cancel {
   border: 0;
@@ -267,4 +293,11 @@ input {
   }
 }
 
+.row{
+  p {
+    font-size: 1.1em;
+    line-height: 1.7em;
+    background-color: #fff;
+  }
+}
 
