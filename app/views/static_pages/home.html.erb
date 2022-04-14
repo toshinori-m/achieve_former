@@ -2,29 +2,24 @@
 <div class="row">
 <% @goal.each do |goal| %>
   <div class="col-md-8">
-  <%= link_to '今期目標', edit_goal_path(goal.id), method: :get , class: "btn" , id: "login"%>
-
+    <%= link_to '今期目標', edit_goal_path(goal.id), method: :get , class: "btn" , id: "login"%>
     <%= render partial: 'goal/goal', locals: {goal: @goal} %>
     <% end %>
-</div>
+  </div>
 </div>
 <div class="row">
 <% @threemonths_goals.each do |threemonths_goal| %>
   <div class="col-md-8">
-  <%= link_to '３ヶ月間目的', new_threemonths_goal_path(threemonths_goal.id), method: :get , class: "btn" , id: "login"%>
-
-  <%= render template: "threemonths_goals/show"  %>
-
+    <%= link_to '３ヶ月間目的', new_threemonths_goal_path(threemonths_goal.id), method: :get , class: "btn" , id: "login"%>
+    <%= render template: "threemonths_goals/show"  %>
     <% end %>
-</div>
+  </div>
 </div>
 <div class="row">
 <% @monthly_goals.each do |monthly_goal| %>
   <div class="col-md-8">
-  <%= link_to '今月目的', new_monthly_goal_path(monthly_goal.id), method: :get , class: "btn" , id: "login"%>
-
-  <%= render template: "monthly_goals/show"  %>
-  
+    <%= link_to '今月目的', new_monthly_goal_path(monthly_goal.id), method: :get , class: "btn" , id: "login"%>
+    <%= render template: "monthly_goals/show"  %>
     <% end %>
-</div>
+  </div>
 </div>

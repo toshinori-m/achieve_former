@@ -1,10 +1,12 @@
 class StaticPagesController < ApplicationController
   def home
     @goal = Goal.all
-    @threemonths_goals = ThreemonthsGoal.all.order(id: "DESC").limit(1)
+    @threemonths_goals = ThreemonthsGoal
+    .where(id: (ThreemonthsGoal.group(:quarter).select('max(id)')))
+    .order('id': :asc)
     @monthly_goals = MonthlyGoal.all.order(id: "DESC").limit(1)
   end
-
+  
   def goal
   end
 
