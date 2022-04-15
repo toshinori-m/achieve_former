@@ -1,0 +1,23 @@
+<calender class="calender" >  
+  <div id='app'>
+    <v-calendar :attributes="attrs" ></v-calendar>         
+  </div>
+  <script>
+  import Vue from 'vue';
+  import VCalendar from 'v-calendar';
+  Vue.use(VCalendar, {componentPrefix: 'vc',  <v-calendar />...,});
+  new Vue({
+    el: '#app',
+    data: { 
+      attrs: [
+          {
+            key: 'today',
+            highlight: {backgroundColor: '#ff8080',},
+            dates: new Date(),
+            popover: {label: 'メッセージを表示できます',},
+          }
+      ],
+    }
+  })
+  </script> 
+</div>
