@@ -2,6 +2,11 @@
   "name": "achieve",
   "private": true,
   "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve"
+  },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
@@ -10,7 +15,7 @@
     "bootstrap": "3.4.1",
     "jquery": "3.4.1",
     "turbolinks": "^5.2.0",
-    "v-calendar": "^2.4.1",
+    "v-calendar": "^3.0.0-alpha.8",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
   },
