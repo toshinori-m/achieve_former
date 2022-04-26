@@ -2,11 +2,13 @@
   "name": "achieve",
   "private": true,
   "license": "UNLICENSED",
-  "type": "module",
+
   "src": "some_script.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack serve"
+    "start": "webpack serve",
+    "all": "run-s build copy",
+    "serve": "webpack serve"
   },
   "dependencies": {
     "@rails/actioncable": "^6.1.5",
