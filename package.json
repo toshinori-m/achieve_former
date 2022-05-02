@@ -2,13 +2,13 @@
   "name": "achieve",
   "private": true,
   "license": "UNLICENSED",
-
   "src": "some_script.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "start": "webpack serve",
-    "all": "run-s build copy",
-    "serve": "webpack serve"
+    "lint": "vue-cli-service lint",
+    "serve": "vue-cli-service build"
   },
   "dependencies": {
     "@rails/actioncable": "^6.1.5",
@@ -19,18 +19,20 @@
     "jquery": "^3.6.0",
     "turbolinks": "^5.2.0",
     "v-calendar": "^3.0.0-alpha.8",
-    "vue": "^3.2.33",
+    "vue": "^2.6.14",
     "vue-loader": "^17.0.0",
-    "vue-template-compiler": "^2.6.14"
+    "ws": "^8.5.0",
+    "yarn": "^1.22.18"
   },
   "version": "0.1.0",
   "devDependencies": {
+    "vue-template-compiler": "^2.6.14",
     "webpack": "^4.46.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.8.1"
   },
   "description": "これは、次の教材で作られたサンプルアプリケーションです。 [*Ruby on Rails チュートリアル*](https://railstutorial.jp/) （第6版） [Michael Hartl](https://www.michaelhartl.com/) 著",
-  "main": "babel.config.js",
+  "main": "dist/ahieve.umd.js",
   "directories": {
     "lib": "lib",
     "test": "test"
