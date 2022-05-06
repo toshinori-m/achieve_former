@@ -1,11 +1,11 @@
 import Vue from 'vue'
-import App from './app.vue'
+import App from '../packs/app.vue'
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
-    el: '#app',
+    el: '#hello',
     data: {
-      message1: "Can you say hello?"
+      message: "Can you say hello?"
     },
     components: { App }
   })

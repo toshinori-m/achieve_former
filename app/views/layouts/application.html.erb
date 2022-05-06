@@ -9,8 +9,6 @@
                               'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application',
                               'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'hello_vue' %> 
-    <%= stylesheet_pack_tag 'hello_vue' %> 
     <%= render 'layouts/shim' %>
   </head>
   <body>
@@ -19,7 +17,12 @@
     <% flash.each do |message_type, message| %>
       <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
     <% end %>
-      <%= yield %>
+    <%= yield %>
+      <%= javascript_pack_tag 'hello_vue' %> 
+      <%= stylesheet_pack_tag 'hello_vue' %> 
+        <div id="hello">
+          <p>{{ message }}</p>
+        </div>
     </div>
   </body>
 </html>

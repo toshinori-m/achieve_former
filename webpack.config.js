@@ -15,7 +15,7 @@ module.exports = {
   },
   output: {
     path: `${__dirname}/dist`,
-    filename: "./app/javascript/packs/hello_vue.js",
+    filename: "../achieve/src/main.js",
     clean: {
       keep: /index.html/, // index.html をキープ（削除しない）
     },
@@ -25,32 +25,32 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
-      },
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader'
-          }
-        ]
-      },
-      {
-        test: /\.svg$/,
-        use: [
-          {
-            loader: 'babel-loader'
-          },
-          {
-            loader: 'react-svg-loader',
-            options: {
-              jsx: true
-            }
-          }
-        ]
       }
+      // {
+      //   test: /\.(png|jpe?g|gif)$/i,
+      //   use: [
+      //     {
+      //       loader: 'file-loader'
+      //     }
+      //   ]
+      // },
+      // {
+      //   test: /\.svg$/,
+      //   use: [
+      //     {
+      //       loader: 'babel-loader'
+      //     },
+      //     {
+      //       loader: 'react-svg-loader',
+      //       options: {
+      //         jsx: true
+      //       }
+      //     }
+      //   ]
+      // }
     ]
   },
 
