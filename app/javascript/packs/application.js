@@ -11,6 +11,6 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require("jquery")
-import "bootstrap"
-window.jQuery = window.$ = require('jquery')
+// require("jquery")
+// import "bootstrap"
+// window.jQuery = window.$ = require('jquery')
