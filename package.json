@@ -22,7 +22,7 @@
     "npm-check-updates": "^12.5.11",
     "turbolinks": "^5.2.0",
     "v-calendar": "^3.0.0-alpha.8",
-    "vue": "^2.6.14",
+    "vue": "^3.2.33",
     "ws": "^8.6.0",
     "yarn": "^1.22.18"
   },

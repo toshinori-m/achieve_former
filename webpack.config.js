@@ -11,7 +11,7 @@ module.exports = {
   // __dirnameは絶対パスでディレクトリ名までを取得
   context: path.join(__dirname, "src"),
   entry: {
-    main: './index.js'
+    main: './app/javascript/packs/hello_vue.js.js'
   },
   output: {
     path: `${__dirname}/dist`,

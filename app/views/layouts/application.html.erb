@@ -13,16 +13,16 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
+    <%= javascript_pack_tag 'hello_vue' %>
+    <%= stylesheet_pack_tag 'hello_vue'  %> 
     <div class="container">
     <% flash.each do |message_type, message| %>
       <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
     <% end %>
     <%= yield %>
-      <%= javascript_pack_tag 'hello_vue' %> 
-      <%= stylesheet_pack_tag 'hello_vue' %> 
-        <div id="hello">
-          <p>{{ message }}</p>
-        </div>
+      <div id="hello">
+        <p>{{ message }}</p>
+      </div>
     </div>
   </body>
 </html>
