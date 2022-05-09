@@ -11,6 +11,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require('./hello_vue.js')
 // require("jquery")
 // import "bootstrap"
 // window.jQuery = window.$ = require('jquery')

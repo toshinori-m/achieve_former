@@ -16,9 +16,9 @@ module.exports = {
   output: {
     path: `${__dirname}/dist`,
     filename: "../achieve/src/main.js",
-    clean: {
-      keep: /index.html/, // index.html をキープ（削除しない）
-    },
+    // clean: {
+    //   keep: /index.html/, // index.html をキープ（削除しない）
+    // },
   },
   devtool: 'hidden-source-map',
   target: 'node',

@@ -16,6 +16,7 @@
     "@rails/activestorage": "^6.1.5",
     "@rails/ujs": "^6.1.5",
     "@rails/webpacker": "^5.4.3",
+    "@vue/compiler-sfc": "^3.2.33",
     "bootstrap": "3.4.1",
     "global": "^4.4.0",
     "jquery": "^3.6.0",

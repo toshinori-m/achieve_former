@@ -14,6 +14,27 @@ const customConfig = {
   }
 };
 
+environment.plugins.prepend(
+  'VueLoaderPlugin',
+  new VueLoaderPlugin()
+)
+
+environment.loaders.prepend('vue',{
+  test: /\.vue$/,
+  use: [{
+      loader: 'vue-loader'
+  }]
+})
+
+const { DefinePlugin } = require('webpack')
+environment.plugins.prepend(
+  'Define',
+  new DefinePlugin({
+      __VUE_OPTIONS_API__: true,
+      __VUE_PROD_DEVTOOLS__: true
+  })
+)
+
 environment.config.delete('node.dgram')
 environment.config.delete('node.fs')
 environment.config.delete('node.net')

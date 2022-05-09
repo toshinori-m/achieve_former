@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/index'
   root  'static_pages#home'
   get  '/training_menu',to: 'static_pages#training_menu'
   get   '/signup',      to: 'users#new'
