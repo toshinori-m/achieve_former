@@ -8745,7 +8745,7 @@ uuid@^8.3.2:
 
 v-calendar@^3.0.0-alpha.8:
   version "3.0.0-alpha.8"
-  resolved "https://registry.npmjs.org/v-calendar/-/v-calendar-3.0.0-alpha.8.tgz"
+  resolved "https://registry.yarnpkg.com/v-calendar/-/v-calendar-3.0.0-alpha.8.tgz#3bc8c69f4788fb527c39706f41fd2a502a17c827"
   integrity sha512-T23H5UbK0EomrwArlF/jrT2LFbV/lu+Bp9JroZ1paN6rPoaMyvE+HrLxvAmUgi+pODrdTURDMzM3+WPgeFKEBQ==
   dependencies:
     "@popperjs/core" "2.4.0"
