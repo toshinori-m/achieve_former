@@ -1,7 +1,4 @@
-<template>
-  <div id="hello">
-    <p>{{ message }}</p>
-  </div>
+
 
   <div id="vcalendar">
     <p>{{ message }}</p>
@@ -12,11 +9,7 @@
 
 <script>
 export default {
-  data: function () {
-    return {
-      message: "hello Vue!!",
-    }
-  },
+
   components: function () {
     calendar,
     DatePiker
