@@ -1,20 +1,34 @@
 <template>
-  <div id="v-calendar">
-  <v-date-picker v-model="date" />
+  <div id="hello">
+    <p>{{ message }}</p>
+  </div>
+
+  <div id="vcalendar">
+    <p>{{ message }}</p>
+    <v-calendar></v-calendar>
+    <v-date-picker v-model='selectedDate' /> 
+  </div>
 </template>
 
 <script>
 export default {
   data: function () {
     return {
-      selectedDate: null,
+      message: "hello Vue!!",
     }
-  }
+  },
+  components: function () {
+    calendar,
+    DatePiker
+  },
 }
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
-<link rel='stylesheet' href='https://unpkg.com/v-calendar/lib/v-calendar.min.css'>
-<script src='https://unpkg.com/v-calendar'></script>
+<style scoped>
+p {
+  font-size: 2em;
+  text-align: center;
+}
+</style>
 
-<script>
+
