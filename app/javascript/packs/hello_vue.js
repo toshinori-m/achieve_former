@@ -1,9 +1,9 @@
-import { createApp } from 'vue'
-import App from '../app.vue'
+import Vue from 'vue';
+import '../packs/v-calendar/dist/style.css';
+import VCalendar from 'v-calendar';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const selector = '#hello';
-  if(document.querySelector(selector)){
-    createApp(App).mount(selector);
-  }
-})
+// Use v-calendar & v-date-picker components
+Vue.use(VCalendar, {
+  componentPrefix: 'vc',  // Use <vc-calendar /> instead of <v-calendar />
+  // ...,                // ...other defaults
+});

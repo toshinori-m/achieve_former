@@ -23,9 +23,8 @@
 </div>
 
 <div id='hello'>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-  {{message}}
-  <%# ↓app.vueの読み込み %>
-  <app></app>
+
+  <v-calendar></v-calendar>
+  <v-date-picker v-model='selectedDate' />
   <h1>Pages#home</h1>
 </div>
