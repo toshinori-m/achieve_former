@@ -7,6 +7,6 @@ import VCalendar from 'v-calendar'
 document.addEventListener('DOMContentLoaded', () => {
   const selector_hello = '#hello_containar';
   if(document.querySelector(selector_hello)){
-    createApp(App).use(VCalendar).use.mount(selector_hello);
+    createApp(App).use(VCalendar).mount(selector_hello);
   }
 })

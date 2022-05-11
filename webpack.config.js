@@ -9,16 +9,13 @@ module.exports = {
     }
   },
   // __dirnameは絶対パスでディレクトリ名までを取得
-  context: path.join(__dirname, "src"),
+  context: path.join(__dirname, "app"),
   entry: {
-    main: './app/javascript/packs/hello_vue.js.js'
+    main: './app/javascript/packs/hello_vue.js'
   },
   output: {
-    path: `${__dirname}/dist`,
-    filename: "../achieve/src/main.js",
-    // clean: {
-    //   keep: /index.html/, // index.html をキープ（削除しない）
-    // },
+    path: __dirname + '../achieve/app/javascript/packs',
+    filename: 'app_vue',
   },
   devtool: 'hidden-source-map',
   target: 'node',

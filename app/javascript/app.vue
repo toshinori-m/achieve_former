@@ -1,15 +1,10 @@
-
-
-  <div id="vcalendar">
-    <p>{{ message }}</p>
+<template>
     <v-calendar></v-calendar>
     <v-date-picker v-model='selectedDate' /> 
-  </div>
 </template>
 
 <script>
 export default {
-
   components: function () {
     calendar,
     DatePiker
