@@ -10,7 +10,7 @@ module.exports = {
     }
   },
   entry: [
-    path.join(__dirname, 'app/javascript/packs', 'hello_vue.js')
+    path.join(__dirname, 'src/js', 'main.js')
   ],
   output: {
     path: path.join(__dirname, 'app/javascript/packs'),
