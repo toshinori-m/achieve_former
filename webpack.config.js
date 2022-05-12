@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
+
 module.exports = {
   mode: 'development',
   resolve: {
@@ -8,14 +9,12 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
     }
   },
-  // __dirnameは絶対パスでディレクトリ名までを取得
-  context: path.join(__dirname, "app"),
-  entry: {
-    main: './app/javascript/packs/hello_vue.js'
-  },
+  entry: [
+    path.join(__dirname, 'app/javascript/packs', 'hello_vue.js')
+  ],
   output: {
-    path: __dirname + '../achieve/app/javascript/packs',
-    filename: 'app_vue',
+    path: path.join(__dirname, 'app/javascript/packs'),
+    filename: 'hello_vue.js',
   },
   devtool: 'hidden-source-map',
   target: 'node',
